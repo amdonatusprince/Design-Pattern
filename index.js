@@ -43,7 +43,7 @@ class Observer {
     constructor() { }
 
     Update(phoneNumber) {
-        console.log("Now dialling " + phoneNumber);
+        console.log(`Now dialling  +${phoneNumber}`);
     }
 }
 
@@ -51,12 +51,12 @@ class Observer {
     constructor() { }
 
     Update(phoneNumber) {
-        console.log("Dialling Notification " + phoneNumber);
+        console.log(`Dialling Notification  +${phoneNumber}`);
     }
 } 
 
 const tel = new Telephone();
-tel.AddPhoneNumber("2347023232");
+tel.AddPhoneNumber(23470876542341);
 
 const observer = new Observer();
 tel.AddObserver(observer);
@@ -64,9 +64,9 @@ tel.AddObserver(observer);
 const observer2 = new Observer2();
 tel.AddObserver(observer2);
 
-tel.DialPhoneNumber("2347023232");
+tel.DialPhoneNumber(23470876542341);
 
 
 //notifyObservers(phoneNumber)
-// Output: Now dialling 2347023232
-// Output: Dialling Notification 2347023232
+// Output: Now dialling +23470876542341
+// Output: Dialling Notification +23470876542341
